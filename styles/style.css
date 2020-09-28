@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/gothampro.ttf') format('truetype');
+  font-size: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0A0B0D;
+  font-family: 'Gotham Pro';
+}
+
+.wrapper {
+  padding: 40px;
+  background: #1C1C1E;
+}
+
+.title {
+  width: 1150px;
+  margin: 32px auto;
+  font-size: 32px;
+  color: #fff;
+}
+
+/* Ограничивающая оболоска */
+.slick-list {
+  width: 1150px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  margin: -20px;
+  
+}
+
+/* главный слайдер */
+
+.slider {
+  position: relative;
+}
+
+.slider .slick-slide {
+  outline: 0;
+}
+
+.slider__item {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.slider__item  img {
+  border-radius: 8px;
+}
+
+.slider__item  p {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 24px;
+  color: #fff;
+
+}
+
+
+@media (max-width: 1280px) {
+  .title {
+    width: 640px;
+    margin-bottom: 20px;
+    
+  }
+
+  .slick-list {
+    width: 640px;
+  }
+
+  .slider__item  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 788px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+  .title {
+    width: 327px;
+  }
+
+  .slick-list {
+    width: 327px;
+  }
+
+  .slider__item  img {
+    width: 327px;
+    height: 327px;
+  }
+}
+
+/* кнопки */
+.slider .slick-arrow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  bottom: -19px;
+  font-size: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  outline-width: 0;
+  cursor: pointer;
+}
+
+.slider .slick-prev {
+  left: calc(50% - 144px);
+  background: url('../images/prev-arrow.svg') no-repeat center center;
+}
+
+.slider .slick-prev:hover {
+  background: url('../images/prev-arrow-active.svg') no-repeat center center;
+}
+
+
+
+.slider .slick-next {
+  right: calc(50% - 144px);
+  background: url('../images/next-arrow.svg') no-repeat center center;
+}
+
+.slider .slick-next:hover {
+  background: url('../images/next-arrow-active.svg') no-repeat center center;
+}
+
+/* Точки управления */
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.slider .slick-dots li.slick-active button {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.slider .slick-dots button {
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+  cursor: pointer;
+}
